@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { memo } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Product, getLocalizedProduct } from '@/data/products';
@@ -12,7 +12,7 @@ interface ProductCardProps {
   priority?: boolean;
 }
 
-export default function ProductCard({ product, priority = false }: ProductCardProps) {
+function ProductCard({ product, priority = false }: ProductCardProps) {
   const { t, language } = useLanguage();
   const localized = getLocalizedProduct(product, language);
 
@@ -39,12 +39,13 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
         className="block relative overflow-hidden aspect-square bg-gray-50/70"
       >
         <Image
-          src={product.images[0]}
+          src={product.cardImage || product.images[0]}
           alt={localized.name}
           fill
           className="object-contain p-3 sm:p-4 group-hover:scale-105 transition-transform duration-300"
-          sizes="(max-width: 360px) 100vw, (max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 280px"
           priority={priority}
+          loading={priority ? undefined : 'lazy'}
         />
         {/* New Arrival Badge */}
         {product.newArrival && (
@@ -130,3 +131,5 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
     </div>
   );
 }
+
+export default memo(ProductCard);

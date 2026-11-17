@@ -743,11 +743,12 @@ export default function OrderClient({ slug }: Props) {
               <div className="flex gap-4 items-center pb-4 sm:pb-5 border-b border-gray-100">
                 <div className="relative w-18 h-18 sm:w-20 sm:h-20 rounded-2xl bg-gray-50 border border-gray-100 overflow-hidden flex-shrink-0">
                   <Image
-                    src={product.images[0]}
+                    src={product.thumbnailImage || product.cardImage || product.images[0]}
                     alt={product.name}
                     fill
                     className="object-contain p-2"
                     sizes="80px"
+                    priority
                   />
                 </div>
                 <div className="min-w-0 flex-1">

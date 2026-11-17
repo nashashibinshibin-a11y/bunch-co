@@ -1,6 +1,14 @@
 'use client';
 
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import React, {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  useCallback,
+  useMemo,
+  ReactNode,
+} from 'react';
 import { Language, translations } from '@/data/translations';
 
 type AnyTranslation = typeof translations[Language];
@@ -19,21 +27,34 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguageState] = useState<Language>('en');
 
   useEffect(() => {
-    const stored = localStorage.getItem(STORAGE_KEY) as Language | null;
-    if (stored && (stored === 'en' || stored === 'ml' || stored === 'hi')) {
-      setLanguageState(stored);
+    try {
+      const stored = localStorage.getItem(STORAGE_KEY) as Language | null;
+      if (stored && (stored === 'en' || stored === 'ml' || stored === 'hi')) {
+        setLanguageState(stored);
+      }
+    } catch {
+      // Graceful fallback if localStorage is disabled or restricted
     }
   }, []);
 
-  const setLanguage = (lang: Language) => {
+  const setLanguage = useCallback((lang: Language) => {
     setLanguageState(lang);
-    localStorage.setItem(STORAGE_KEY, lang);
-  };
+    try {
+      localStorage.setItem(STORAGE_KEY, lang);
+    } catch {
+      // Graceful fallback
+    }
+  }, []);
 
-  const t = translations[language];
+  const t = useMemo(() => translations[language], [language]);
+
+  const value = useMemo(
+    () => ({ language, setLanguage, t }),
+    [language, setLanguage, t]
+  );
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider value={value}>
       {children}
     </LanguageContext.Provider>
   );

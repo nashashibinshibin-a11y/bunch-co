@@ -39,7 +39,7 @@ export default function Navbar() {
           {/* Logo on Light / White Header */}
           <Link href="/" className="flex items-center flex-shrink-0 group">
             <Image
-              src="/images/logo/logo-navy.png"
+              src="/images/logo/logo-navy.webp"
               alt="BUNCH & CO."
               width={160}
               height={53}
@@ -129,11 +129,12 @@ export default function Navbar() {
           {/* Mobile Brand Banner */}
           <div className="px-4 pt-3.5 pb-2.5 border-b border-gray-50 flex items-center justify-between">
             <Image
-              src="/images/logo/logo-navy.png"
+              src="/images/logo/logo-navy.webp"
               alt="BUNCH & CO."
               width={120}
               height={40}
               className="h-6 w-auto object-contain"
+              loading="lazy"
             />
             <span className="text-[11px] text-gray-400 italic line-clamp-1">
               {t.hero?.tagline || 'Good finds for everyday life'}

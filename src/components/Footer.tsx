@@ -26,11 +26,12 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="sm:col-span-2 lg:col-span-1">
             <Image
-              src="/images/logo/logo-white.png"
+              src="/images/logo/logo-white.webp"
               alt="BUNCH & CO."
               width={160}
               height={53}
               className="h-9 w-auto mb-4 object-contain"
+              loading="lazy"
             />
             <p className="text-blue-200 text-sm leading-relaxed mb-5">
               {t.footer.tagline}

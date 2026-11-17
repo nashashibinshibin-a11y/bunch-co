@@ -28,6 +28,7 @@ export default function ImageGallery({ images, productName }: ImageGalleryProps)
             className="object-contain p-4"
             sizes="(max-width: 768px) 100vw, 50vw"
             priority={activeIdx === 0}
+            loading={activeIdx === 0 ? undefined : 'lazy'}
           />
           {/* Zoom Button */}
           <button
@@ -65,6 +66,7 @@ export default function ImageGallery({ images, productName }: ImageGalleryProps)
                 <button
                   key={i}
                   onClick={() => setActiveIdx(i)}
+                  aria-label={`Go to image ${i + 1}`}
                   className={`w-2 h-2 rounded-full transition-all ${
                     i === activeIdx ? 'bg-brand-navy w-5' : 'bg-gray-300 hover:bg-gray-400'
                   }`}
@@ -81,6 +83,7 @@ export default function ImageGallery({ images, productName }: ImageGalleryProps)
               <button
                 key={i}
                 onClick={() => setActiveIdx(i)}
+                aria-label={`View ${productName} image ${i + 1}`}
                 className={`relative flex-shrink-0 w-16 h-16 rounded-xl overflow-hidden border-2 transition-all duration-150 ${
                   i === activeIdx
                     ? 'border-brand-navy shadow-sm'
@@ -88,11 +91,12 @@ export default function ImageGallery({ images, productName }: ImageGalleryProps)
                 }`}
               >
                 <Image
-                  src={src}
+                  src={src.replace('.webp', '-thumb.webp').replace('.png', '-thumb.webp')}
                   alt={`${productName} thumbnail ${i + 1}`}
                   fill
                   className="object-contain p-1"
                   sizes="64px"
+                  loading="lazy"
                 />
               </button>
             ))}

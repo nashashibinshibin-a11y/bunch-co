@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, Suspense } from 'react';
+import React, { useState, useEffect, useMemo, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { useLanguage } from '@/context/LanguageContext';
@@ -23,12 +23,16 @@ function ShopContent() {
     }
   }, [categoryParam]);
 
-  const filteredProducts =
-    activeCategory === 'All'
+  const filteredProducts = useMemo(() => {
+    return activeCategory === 'All'
       ? products
       : products.filter((p) => p.category === activeCategory);
+  }, [activeCategory]);
 
-  const allCats: (Category | 'All')[] = ['All', ...categories.map((c) => c.name)];
+  const allCats: (Category | 'All')[] = useMemo(
+    () => ['All', ...categories.map((c) => c.name)],
+    []
+  );
 
   const getCatLabel = (cat: Category | 'All') => {
     if (cat === 'All') return t.misc?.all || 'All';

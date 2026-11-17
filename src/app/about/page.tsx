@@ -34,7 +34,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
           <div className="mb-4">
             <Image
-              src="/images/logo/logo-white.png"
+              src="/images/logo/logo-white.webp"
               alt="BUNCH & CO."
               width={220}
               height={73}

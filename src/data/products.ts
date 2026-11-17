@@ -40,7 +40,9 @@ export interface Product {
   description: string;
   features: string[];
   specifications: ProductSpec[];
-  images: string[]; // paths relative to /public
+  images: string[]; // paths relative to /public (high-resolution WebP for detail view)
+  cardImage?: string; // optimized 420x420 WebP for product grids & mobile cards
+  thumbnailImage?: string; // optimized 160x160 WebP for gallery thumbnails & order summary
   availability: 'in-stock' | 'out-of-stock' | 'limited';
   delivery: DeliveryInfo;
   featured: boolean;
@@ -116,10 +118,12 @@ export const products: Product[] = [
       { label: 'Bottom Style', value: 'Ring Collar' },
     ],
     images: [
-      '/images/products/mojila-tank-filter/product-main.png',
-      '/images/products/mojila-tank-filter/product-specs.png',
-      '/images/products/mojila-tank-filter/product-usage.png',
+      '/images/products/mojila-tank-filter/product-main.webp',
+      '/images/products/mojila-tank-filter/product-specs.webp',
+      '/images/products/mojila-tank-filter/product-usage.webp',
     ],
+    cardImage: '/images/products/mojila-tank-filter/product-main-card.webp',
+    thumbnailImage: '/images/products/mojila-tank-filter/product-main-thumb.webp',
     availability: 'in-stock',
     delivery: {
       note: 'Delivery availability and estimated timelines are confirmed through WhatsApp. Contact us to check delivery to your location.',
@@ -261,10 +265,12 @@ export const products: Product[] = [
       { label: 'Bottom Style', value: 'Ring Collar' },
     ],
     images: [
-      '/images/products/mojila-tank-filter/product-main.png',
-      '/images/products/mojila-tank-filter/product-specs.png',
-      '/images/products/mojila-tank-filter/product-usage.png',
+      '/images/products/mojila-tank-filter/product-main.webp',
+      '/images/products/mojila-tank-filter/product-specs.webp',
+      '/images/products/mojila-tank-filter/product-usage.webp',
     ],
+    cardImage: '/images/products/mojila-tank-filter/product-main-card.webp',
+    thumbnailImage: '/images/products/mojila-tank-filter/product-main-thumb.webp',
     availability: 'in-stock',
     delivery: {
       note: 'Delivery availability and estimated timelines are confirmed through WhatsApp. Contact us to check delivery to your location.',
@@ -406,10 +412,12 @@ export const products: Product[] = [
       { label: 'Bottom Style', value: 'Ring Collar' },
     ],
     images: [
-      '/images/products/mojila-tank-filter/product-main.png',
-      '/images/products/mojila-tank-filter/product-specs.png',
-      '/images/products/mojila-tank-filter/product-usage.png',
+      '/images/products/mojila-tank-filter/product-main.webp',
+      '/images/products/mojila-tank-filter/product-specs.webp',
+      '/images/products/mojila-tank-filter/product-usage.webp',
     ],
+    cardImage: '/images/products/mojila-tank-filter/product-main-card.webp',
+    thumbnailImage: '/images/products/mojila-tank-filter/product-main-thumb.webp',
     availability: 'in-stock',
     delivery: {
       note: 'Delivery availability and estimated timelines are confirmed through WhatsApp. Contact us to check delivery to your location.',
@@ -552,10 +560,12 @@ export const products: Product[] = [
       { label: 'Compatibility', value: 'Suitable for compatible car headrests' },
     ],
     images: [
-      '/images/products/car-seat-hanger/product-main.png',
-      '/images/products/car-seat-hanger/product-size.png',
-      '/images/products/car-seat-hanger/product-usage.png',
+      '/images/products/car-seat-hanger/product-main.webp',
+      '/images/products/car-seat-hanger/product-size.webp',
+      '/images/products/car-seat-hanger/product-usage.webp',
     ],
+    cardImage: '/images/products/car-seat-hanger/product-main-card.webp',
+    thumbnailImage: '/images/products/car-seat-hanger/product-main-thumb.webp',
     availability: 'in-stock',
     delivery: {
       note: 'Delivery availability and estimated timelines are confirmed through WhatsApp. Contact us to check delivery to your location.',

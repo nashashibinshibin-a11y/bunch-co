@@ -49,7 +49,7 @@ export default function HomePage() {
               {/* Official White Logo in Dark Hero */}
               <div className="mb-5 flex justify-center lg:justify-start">
                 <Image
-                  src="/images/logo/logo-white.png"
+                  src="/images/logo/logo-white.webp"
                   alt="BUNCH & CO."
                   width={280}
                   height={93}
@@ -117,7 +117,7 @@ export default function HomePage() {
               <div className="hidden lg:flex justify-center">
                 <div className="relative w-80 h-80 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-sm p-6 shadow-2xl flex items-center justify-center">
                   <Image
-                    src={featuredProducts[0].images[0]}
+                    src={featuredProducts[0].cardImage || featuredProducts[0].images[0]}
                     alt={featuredProducts[0].name}
                     fill
                     className="object-contain p-6"
