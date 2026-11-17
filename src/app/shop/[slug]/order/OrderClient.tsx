@@ -27,6 +27,7 @@ import {
   Check,
   X,
   MapPin,
+  Banknote,
 } from 'lucide-react';
 
 interface Props {
@@ -702,6 +703,19 @@ export default function OrderClient({ slug }: Props) {
                 </div>
               </div>
 
+              {/* Cash on Delivery Notice for Mobile */}
+              <div className="lg:hidden mt-3 p-3 rounded-2xl bg-emerald-50/90 border border-emerald-200/80 text-emerald-950 flex items-start gap-2.5 text-xs">
+                <Banknote size={16} className="text-emerald-600 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-bold text-emerald-900 leading-tight">
+                    {t.trust?.codBadge || 'Cash on Delivery Available'}
+                  </p>
+                  <p className="text-[11px] text-emerald-800/90 mt-0.5 leading-tight">
+                    {t.trust?.codOrderNote || 'Pay cash when your order arrives. Online payment is not compulsory.'}
+                  </p>
+                </div>
+              </div>
+
               {/* Submit Button for Mobile View */}
               <div className="lg:hidden pt-3">
                 <button
@@ -920,6 +934,19 @@ export default function OrderClient({ slug }: Props) {
                 <span className="text-2xl sm:text-3xl font-black text-brand-navy">
                   ₹{totalAmount}
                 </span>
+              </div>
+
+              {/* Cash on Delivery Notice for Desktop Summary */}
+              <div className="bg-emerald-50/90 border border-emerald-200/80 rounded-2xl p-3.5 mb-4 flex items-start gap-2.5 text-emerald-950">
+                <Banknote size={18} className="text-emerald-600 flex-shrink-0 mt-0.5" />
+                <div className="text-xs">
+                  <p className="font-bold text-emerald-900">
+                    {t.trust?.codBadge || 'Cash on Delivery Available'}
+                  </p>
+                  <p className="text-[11px] text-emerald-800/90 mt-0.5 leading-normal">
+                    {t.trust?.codOrderNote || 'Pay cash when your order arrives. Online payment is not compulsory.'}
+                  </p>
+                </div>
               </div>
 
               {/* Desktop Submit Button */}

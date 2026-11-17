@@ -12,6 +12,9 @@ import {
   Truck,
   Tag,
   Package,
+  Banknote,
+  RotateCcw,
+  ShieldCheck,
 } from 'lucide-react';
 
 interface Props {
@@ -202,6 +205,65 @@ export default function ProductDetailClient({ slug }: Props) {
                 <Package size={12} className="text-brand-orange" />
                 {t.product.category}: <strong className="text-gray-700 ml-1">{localizedCategory}</strong>
               </span>
+            </div>
+
+            {/* Customer Assurance Section: COD, Returns, Refunds */}
+            <div className="bg-white rounded-2xl border border-gray-200/90 p-3.5 sm:p-4 mb-5 shadow-xs">
+              <div className="flex items-center justify-between pb-2 mb-2.5 border-b border-gray-100">
+                <p className="text-[11px] font-bold uppercase tracking-wider text-brand-orange">
+                  {t.trust?.bannerBadge || 'Customer Assurance'}
+                </p>
+                <Link
+                  href="/returns-and-refunds"
+                  className="text-[11px] font-semibold text-brand-navy hover:text-brand-orange transition-colors flex items-center gap-0.5"
+                >
+                  <span>{t.nav?.returnsPolicy || 'Policy Details'}</span>
+                  <ChevronRight size={11} />
+                </Link>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                <div className="flex items-center gap-2">
+                  <span className="w-7 h-7 rounded-lg bg-emerald-50 border border-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0">
+                    <Banknote size={15} />
+                  </span>
+                  <div>
+                    <p className="text-xs font-bold text-gray-900 leading-tight">
+                      {t.trust?.codBadge || 'Cash on Delivery Available'}
+                    </p>
+                    <p className="text-[10.5px] text-gray-500 leading-tight">
+                      {t.trust?.codDesc || 'Pay when your order arrives.'}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <span className="w-7 h-7 rounded-lg bg-blue-50 border border-blue-100 text-brand-navy flex items-center justify-center flex-shrink-0">
+                    <RotateCcw size={15} />
+                  </span>
+                  <div>
+                    <p className="text-xs font-bold text-gray-900 leading-tight">
+                      {t.trust?.returnsBadge || 'Returns Available'}
+                    </p>
+                    <p className="text-[10.5px] text-gray-500 leading-tight">
+                      {t.trust?.returnsDesc || 'Return assistance is available.'}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <span className="w-7 h-7 rounded-lg bg-orange-50 border border-orange-100 text-brand-orange flex items-center justify-center flex-shrink-0">
+                    <ShieldCheck size={15} />
+                  </span>
+                  <div>
+                    <p className="text-xs font-bold text-gray-900 leading-tight">
+                      {t.trust?.refundsBadge || 'Refund Support Available'}
+                    </p>
+                    <p className="text-[10.5px] text-gray-500 leading-tight">
+                      {t.trust?.refundsDesc || 'Contact us for help with refunds.'}
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Order Now Button — Opens dedicated order form */}

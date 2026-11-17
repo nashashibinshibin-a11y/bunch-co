@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Product, getLocalizedProduct } from '@/data/products';
 import { useLanguage } from '@/context/LanguageContext';
-import { ShoppingBag, Package } from 'lucide-react';
+import { ShoppingBag, Package, Banknote } from 'lucide-react';
 
 interface ProductCardProps {
   product: Product;
@@ -95,7 +95,7 @@ function ProductCard({ product, priority = false }: ProductCardProps) {
         </p>
 
         {/* Price Row */}
-        <div className="flex items-baseline gap-2 mt-auto mb-3 flex-wrap">
+        <div className="flex items-baseline gap-2 mt-auto mb-2 flex-wrap">
           <span className="text-lg sm:text-xl font-black text-brand-navy">
             ₹{product.price}
           </span>
@@ -109,6 +109,12 @@ function ProductCard({ product, priority = false }: ProductCardProps) {
               {language === 'ml' ? '(പായ്ക്ക്)' : language === 'hi' ? '(प्रति पैक)' : '(per pack)'}
             </span>
           )}
+        </div>
+
+        {/* Cash on Delivery Badge */}
+        <div className="flex items-center gap-1.5 text-[10.5px] text-emerald-800 bg-emerald-50 border border-emerald-200/60 px-2 py-0.5 rounded-lg mb-3 w-fit font-semibold">
+          <Banknote size={11} className="text-emerald-600 flex-shrink-0" />
+          <span className="truncate">{t.trust?.codBadge || 'Cash on Delivery Available'}</span>
         </div>
 
         {/* Action Buttons — 2-column grid so both fit cleanly on mobile */}

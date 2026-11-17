@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
 import { Language, languageNames } from '@/data/translations';
 import { categories } from '@/data/products';
-import { MessageCircle, MapPin, Clock, Globe } from 'lucide-react';
+import { MessageCircle, MapPin, Clock, Globe, Banknote, RotateCcw, ShieldCheck } from 'lucide-react';
 
 export default function Footer() {
   const { t, language, setLanguage } = useLanguage();
@@ -17,6 +17,7 @@ export default function Footer() {
     { href: '/shop', label: t.nav.shop },
     { href: '/about', label: t.nav.about },
     { href: '/contact', label: t.nav.contact },
+    { href: '/returns-and-refunds', label: t.footer.returnsRefunds || 'Returns & Refunds' },
   ];
 
   return (
@@ -112,6 +113,38 @@ export default function Footer() {
               </li>
             </ul>
           </div>
+        </div>
+
+        {/* Footer Trust Bar */}
+        <div className="border-t border-white/10 mt-10 pt-6 grid grid-cols-1 sm:grid-cols-3 gap-3.5 text-xs text-blue-200">
+          <div className="flex items-center gap-2.5">
+            <span className="w-7 h-7 rounded-lg bg-emerald-500/20 text-emerald-300 flex items-center justify-center flex-shrink-0">
+              <Banknote size={15} />
+            </span>
+            <span className="font-medium">{t.trust?.codBadge || 'Cash on Delivery Available'}</span>
+          </div>
+          <Link
+            href="/returns-and-refunds"
+            className="flex items-center gap-2.5 hover:text-white transition-colors group"
+          >
+            <span className="w-7 h-7 rounded-lg bg-blue-500/20 text-blue-300 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
+              <RotateCcw size={15} />
+            </span>
+            <span className="font-medium underline-offset-4 group-hover:underline">
+              {t.trust?.returnsBadge || 'Returns Available'}
+            </span>
+          </Link>
+          <Link
+            href="/returns-and-refunds"
+            className="flex items-center gap-2.5 hover:text-white transition-colors group"
+          >
+            <span className="w-7 h-7 rounded-lg bg-orange-500/20 text-orange-300 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
+              <ShieldCheck size={15} />
+            </span>
+            <span className="font-medium underline-offset-4 group-hover:underline">
+              {t.trust?.refundsBadge || 'Refund Support Available'}
+            </span>
+          </Link>
         </div>
 
         {/* Bottom Bar */}

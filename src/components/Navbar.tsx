@@ -26,6 +26,11 @@ export default function Navbar() {
     { href: '/#faq', label: t.nav.faq || 'FAQ' },
   ];
 
+  const mobileNavLinks = [
+    ...navLinks,
+    { href: '/returns-and-refunds', label: t.nav.returnsPolicy || 'Returns & Refunds' },
+  ];
+
   const languages: Language[] = ['en', 'ml', 'hi'];
 
   return (
@@ -142,7 +147,7 @@ export default function Navbar() {
           </div>
 
           <nav className="px-3 py-2 space-y-1">
-            {navLinks.map((link) => (
+            {mobileNavLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}

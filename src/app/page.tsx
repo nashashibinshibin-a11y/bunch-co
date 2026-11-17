@@ -11,6 +11,7 @@ import {
   getCategoryCount,
 } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
+import TrustSection from '@/components/TrustSection';
 import FAQSection from '@/components/FAQSection';
 import WhatsAppSection from '@/components/WhatsAppSection';
 import {
@@ -19,6 +20,8 @@ import {
   Sparkles,
   Shield,
   MessageCircle,
+  Banknote,
+  RotateCcw,
 } from 'lucide-react';
 
 export default function HomePage() {
@@ -89,16 +92,16 @@ export default function HomePage() {
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 mt-10 pt-6 border-t border-white/10">
                 {[
                   {
+                    icon: Banknote,
+                    label: t.trust?.codBadge || 'Cash on Delivery Available',
+                  },
+                  {
+                    icon: RotateCcw,
+                    label: t.trust?.bannerBadge || 'Easy Returns & Refunds Available',
+                  },
+                  {
                     icon: Shield,
                     label: t.hero?.qualityAssured || 'Quality Assured',
-                  },
-                  {
-                    icon: MessageCircle,
-                    label: t.hero?.whatsappOrders || 'WhatsApp Orders',
-                  },
-                  {
-                    icon: Sparkles,
-                    label: t.hero?.curatedProducts || 'Curated Finds',
                   },
                 ].map(({ icon: Icon, label }) => (
                   <div
@@ -133,6 +136,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ===================== HOMEPAGE TRUST SECTION ===================== */}
+      <TrustSection />
 
       {/* ===================== FEATURED PRODUCTS ===================== */}
       {featuredProducts.length > 0 && (

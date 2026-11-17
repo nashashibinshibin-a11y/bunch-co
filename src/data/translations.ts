@@ -21,6 +21,50 @@ export const translations = {
       contact: 'Contact',
       faq: 'FAQ',
       allProducts: 'All Products',
+      returnsPolicy: 'Returns & Refunds',
+    },
+    // Trust & Customer Assurance (COD, Returns, Refunds)
+    trust: {
+      codTitle: 'Cash on Delivery',
+      codDesc: 'Pay when your order arrives.',
+      codBadge: 'Cash on Delivery Available',
+      codOrderNote: 'Pay cash when your order arrives. Online payment is not compulsory.',
+      returnsTitle: 'Easy Returns',
+      returnsDesc: 'Return assistance is available.',
+      returnsBadge: 'Returns Available',
+      refundsTitle: 'Refund Support',
+      refundsDesc: 'Contact us for help with refund requests.',
+      refundsBadge: 'Refund Support Available',
+      bannerBadge: 'Easy Returns & Refunds Available',
+      whatsappAssistance: 'Contact us on WhatsApp for assistance.',
+    },
+    // Returns & Refunds Dedicated Policy Content
+    returnsPolicy: {
+      pageTitle: 'Returns & Refund Policy',
+      pageSubtitle: 'Transparent assistance for product returns and refund requests.',
+      heroBadge: 'Customer Protection',
+      neutralStatement:
+        'Returns and refunds are available. Please contact BUNCH & CO. through WhatsApp for assistance with your return or refund request and to confirm the applicable conditions.',
+      whatsappCta: 'Contact WhatsApp Support',
+      whatsappMessage: 'Hi BUNCH & CO.! I need assistance with a return or refund request.',
+      howToReturnTitle: '1. How to Request a Return',
+      howToReturnDesc:
+        'If you wish to return a product you received, reach out to our team directly on WhatsApp. Share your order information, product details, and the reason for your request. Our support team will guide you through the process.',
+      contactTitle: '2. How to Contact BUNCH & CO.',
+      contactDesc:
+        'You can contact us via WhatsApp at +91 89212 67174 (Monday to Saturday, 9 AM to 7 PM IST). We provide personal, one-on-one assistance directly in your chat.',
+      refundHandlingTitle: '3. How Refund Requests are Handled',
+      refundHandlingDesc:
+        'Once you get in touch with us regarding a refund, our team reviews your request details, confirms the applicable conditions with you, and coordinates the next steps directly through WhatsApp.',
+      updatesTitle: '4. How You Receive Updates',
+      updatesDesc:
+        'All updates regarding your return or refund request are communicated directly to you via WhatsApp, so you never have to check external portals or wait for automated emails.',
+      codTitle: '5. Cash on Delivery (COD) Orders',
+      codDesc:
+        'For orders placed with Cash on Delivery, our support team will guide you on the return process and coordinate refund arrangements directly with you upon confirmation of your request.',
+      configNotice: 'Official Terms Configuration',
+      configNoticeDesc:
+        'Specific terms such as exact return windows, inspection criteria, and processing schedules can be confirmed directly with our support team.',
     },
     // Categories (Localized display names)
     categories: {
@@ -220,6 +264,26 @@ export const translations = {
           q: 'What is the MOJILA 5-Micron Water Tank Filter Bag?',
           a: 'The MOJILA 5-Micron Water Tank Filter Bag is a sediment filtration bag made of durable polypropylene (PP). It features a convenient ring-collar design that slips over inlet pipes to capture sand, dirt, and suspended sediment before entering your water tank. Please note it is a mechanical sediment filter and is not designed to purify drinking water.',
         },
+        {
+          q: 'Is Cash on Delivery (COD) available?',
+          a: 'Yes, Cash on Delivery is available! You can pay cash when your order is delivered directly to your doorstep. Online payment is not compulsory.',
+        },
+        {
+          q: 'Can I return a product?',
+          a: 'Yes, returns are available. Please contact BUNCH & CO. through WhatsApp for assistance with your return request and to confirm the applicable conditions.',
+        },
+        {
+          q: 'Are refunds available?',
+          a: 'Yes, refund support is available. Please reach out to our team via WhatsApp to discuss your refund request and learn about the applicable terms.',
+        },
+        {
+          q: 'How do I request a return or refund?',
+          a: 'Simply send us a message on WhatsApp at +91 89212 67174 with your order details and product information. Our support team will assist you with the step-by-step process.',
+        },
+        {
+          q: 'How can I contact BUNCH & CO.?',
+          a: 'You can contact us directly on WhatsApp at +91 89212 67174 or via our Contact Us page. We are available Monday to Saturday to assist you with orders, deliveries, returns, and refunds.',
+        },
       ],
     },
     // WhatsApp Section on Homepage / Footer
@@ -241,6 +305,7 @@ export const translations = {
       quickLinks: 'Quick Links',
       categories: 'Categories',
       contact: 'Contact',
+      returnsRefunds: 'Returns & Refunds',
       rights: 'All rights reserved.',
       madeIn: 'Made with ❤️ in Kerala',
     },
@@ -268,6 +333,50 @@ export const translations = {
       contact: 'ബന്ധപ്പെടുക',
       faq: 'ചോദ്യോത്തരങ്ങൾ',
       allProducts: 'എല്ലാ ഉൽപ്പന്നങ്ങളും',
+      returnsPolicy: 'റിട്ടേണും റീഫണ്ടും',
+    },
+    // Trust & Customer Assurance (COD, Returns, Refunds)
+    trust: {
+      codTitle: 'ക്യാഷ് ഓൺ ഡെലിവറി',
+      codDesc: 'ഓർഡർ എത്തുമ്പോൾ പണം നൽകാം.',
+      codBadge: 'ക്യാഷ് ഓൺ ഡെലിവറി ലഭ്യമാണ്',
+      codOrderNote: 'ഓർഡർ നിങ്ങളുടെ വിലാസത്തിൽ എത്തുമ്പോൾ പണം നൽകാം. ഓൺലൈൻ പേയ്‌മെന്റ് നിർബന്ധമല്ല.',
+      returnsTitle: 'എളുപ്പമുള്ള റിട്ടേൺ',
+      returnsDesc: 'റിട്ടേൺ സഹായം ലഭ്യമാണ്.',
+      returnsBadge: 'റിട്ടേൺ ലഭ്യമാണ്',
+      refundsTitle: 'റീഫണ്ട് സപ്പോർട്ട്',
+      refundsDesc: 'റീഫണ്ട് അഭ്യർത്ഥനകൾക്ക് ഞങ്ങളെ ബന്ധപ്പെടൂ.',
+      refundsBadge: 'റീഫണ്ട് സഹായം ലഭ്യമാണ്',
+      bannerBadge: 'എളുപ്പമുള്ള റിട്ടേണും റീഫണ്ടും ലഭ്യമാണ്',
+      whatsappAssistance: 'സഹായത്തിന് WhatsApp-ൽ ബന്ധപ്പെടുക.',
+    },
+    // Returns & Refunds Dedicated Policy Content
+    returnsPolicy: {
+      pageTitle: 'റിട്ടേൺ & റീഫണ്ട് നയം',
+      pageSubtitle: 'ഉൽപ്പന്ന റിട്ടേണുകൾക്കും റീഫണ്ട് അഭ്യർത്ഥനകൾക്കും സുതാര്യമായ സഹായം.',
+      heroBadge: 'ഉപഭോക്തൃ സുരക്ഷ',
+      neutralStatement:
+        'റിട്ടേണുകളും റീഫണ്ടുകളും ലഭ്യമാണ്. നിങ്ങളുടെ റിട്ടേൺ അല്ലെങ്കിൽ റീഫണ്ട് അഭ്യർത്ഥനയുമായി ബന്ധപ്പെട്ട സഹായത്തിനും ബാധകമായ നിബന്ധനകൾ അറിയുന്നതിനും ദയവായി WhatsApp വഴി BUNCH & CO. യുമായി ബന്ധപ്പെടുക.',
+      whatsappCta: 'WhatsApp സപ്പോർട്ടുമായി ബന്ധപ്പെടുക',
+      whatsappMessage: 'Hi BUNCH & CO.! എനിക്ക് ഒരു റിട്ടേൺ അല്ലെങ്കിൽ റീഫണ്ട് സഹായം ആവശ്യമുണ്ട്.',
+      howToReturnTitle: '1. എങ്ങനെ റിട്ടേൺ അഭ്യർത്ഥിക്കാം',
+      howToReturnDesc:
+        'നിങ്ങൾക്ക് ലഭിച്ച ഉൽപ്പന്നം റിട്ടേൺ ചെയ്യാൻ ആഗ്രഹിക്കുന്നുവെങ്കിൽ, നേരിട്ട് WhatsApp വഴി ഞങ്ങളുടെ ടീമുമായി ബന്ധപ്പെടുക. നിങ്ങളുടെ ഓർഡർ വിവരങ്ങളും ഉൽപ്പന്നത്തിന്റെ ഫോട്ടോകളും പങ്കുവെക്കുക. ഞങ്ങളുടെ ടീം ബാക്കി കാര്യങ്ങളിൽ നിങ്ങളെ സഹായിക്കും.',
+      contactTitle: '2. BUNCH & CO. യുമായി എങ്ങനെ ബന്ധപ്പെടാം',
+      contactDesc:
+        '+91 89212 67174 എന്ന നമ്പറിൽ WhatsApp വഴി നേരിട്ട് ബന്ധപ്പെടാം (തിങ്കൾ മുതൽ ശനി വരെ, രാവിലെ 9 മുതൽ വൈകിട്ട് 7 വരെ). നിങ്ങളുടെ ചാറ്റിലൂടെ വ്യക്തിഗത സഹായം ഉറപ്പാക്കുന്നു.',
+      refundHandlingTitle: '3. റീഫണ്ട് അഭ്യർത്ഥനകൾ കൈകാര്യം ചെയ്യുന്നത് എങ്ങനെ',
+      refundHandlingDesc:
+        'റീഫണ്ടിനായി ഞങ്ങളുമായി ബന്ധപ്പെടുമ്പോൾ, ഞങ്ങളുടെ ടീം നിങ്ങളുടെ വിവരങ്ങൾ പരിശോധിക്കുകയും ബാധകമായ വ്യവസ്ഥകൾ സ്ഥിരീകരിച്ച് WhatsApp വഴി അടുത്ത നടപടികൾ പൂർത്തിയാക്കുകയും ചെയ്യുന്നു.',
+      updatesTitle: '4. വിവരങ്ങൾ എങ്ങനെ അറിയാം',
+      updatesDesc:
+        'നിങ്ങളുടെ റിട്ടേൺ അല്ലെങ്കിൽ റീഫണ്ട് അഭ്യർത്ഥനയുടെ എല്ലാ വിവരങ്ങളും നേരിട്ട് WhatsApp ചാറ്റിൽ തന്നെ നൽകും. വെബ്‌സൈറ്റ് പോർട്ടലുകളിൽ കയറി പരിശോധിക്കേണ്ടതില്ല.',
+      codTitle: '5. ക്യാഷ് ഓൺ ഡെലിവറി (COD) ഓർഡറുകൾ',
+      codDesc:
+        'ക്യാഷ് ഓൺ ഡെലിവറി വഴി വാങ്ങിയ ഉൽപ്പന്നങ്ങളുടെ കാര്യത്തിൽ, റിട്ടേൺ അഭ്യർത്ഥന അംഗീകരിച്ച ശേഷം റീഫണ്ട് നൽകാനുള്ള ക്രമീകരണങ്ങൾ ഞങ്ങളുടെ സപ്പോർട്ട് ടീം WhatsApp-ലൂടെ നേരിട്ട് ഏകോപിപ്പിക്കും.',
+      configNotice: 'നിബന്ധനകൾ',
+      configNoticeDesc:
+        'നിർദ്ദിഷ്ട റിട്ടേൺ കാലാവധി, പരിശോധനാ മാനദണ്ഡങ്ങൾ എന്നിവ ഞങ്ങളുടെ സപ്പോർട്ട് ടീമുമായി നേരിട്ട് സ്ഥിരീകരിക്കാം.',
     },
     // Categories (Localized display names)
     categories: {
@@ -467,6 +576,26 @@ export const translations = {
           q: 'എന്താണ് MOJILA 5-Micron വാട്ടർ ടാങ്ക് ഫിൽട്ടർ ബാഗ്?',
           a: 'പോളിപ്രൊഫൈലിൻ (PP) മെറ്റീരിയൽ കൊണ്ട് നിർമ്മിച്ച ഫിൽട്ടർ ബാഗ് ആണിത്. ടാങ്കിലേക്ക് വെള്ളം വീഴുന്ന പൈപ്പിൽ ഘടിപ്പിച്ചാൽ മണ്ണും ചെളിയും തടഞ്ഞുനിർത്തും. ഇത് കുടിവെള്ളം ശുദ്ധീകരിക്കാനുള്ള പ്യൂരിഫയർ അല്ല എന്നത് ശ്രദ്ധിക്കുക.',
         },
+        {
+          q: 'ക്യാഷ് ഓൺ ഡെലിവറി (COD) ലഭ്യമാണോ?',
+          a: 'അതെ! ക്യാഷ് ഓൺ ഡെലിവറി ലഭ്യമാണ്. ഉൽപ്പന്നം നിങ്ങളുടെ വിലാസത്തിൽ എത്തുമ്പോൾ പണം നൽകാം. ഓൺലൈൻ പേയ്‌മെന്റ് നിർബന്ധമല്ല.',
+        },
+        {
+          q: 'ഉൽപ്പന്നം റിട്ടേൺ ചെയ്യാൻ സാധിക്കുമോ?',
+          a: 'അതെ, റിട്ടേൺ സൗകര്യം ലഭ്യമാണ്. നിങ്ങളുടെ റിട്ടേൺ അഭ്യർത്ഥനയുമായി ബന്ധപ്പെട്ട സഹായത്തിനും ബാധകമായ നിബന്ധനകൾ അറിയുന്നതിനും WhatsApp വഴി BUNCH & CO. മായി ബന്ധപ്പെടുക.',
+        },
+        {
+          q: 'റീഫണ്ട് ലഭ്യമാണോ?',
+          a: 'അതെ, റീഫണ്ട് സഹായം ലഭ്യമാണ്. നിങ്ങളുടെ റീഫണ്ട് അഭ്യർത്ഥനയുമായി ബന്ധപ്പെട്ട സഹായത്തിനും ബാധകമായ നിബന്ധനകൾ സ്ഥിരീകരിക്കുന്നതിനും WhatsApp വഴി ഞങ്ങളുമായി ബന്ധപ്പെടുക.',
+        },
+        {
+          q: 'എങ്ങനെയാണ് റിട്ടേൺ അല്ലെങ്കിൽ റീഫണ്ട് അഭ്യർത്ഥിക്കുന്നത്?',
+          a: 'നിങ്ങളുടെ ഓർഡർ വിവരങ്ങളും ഉൽപ്പന്ന വിവരങ്ങളും സഹിതം +91 89212 67174 എന്ന നമ്പറിൽ WhatsApp വഴി ബന്ധപ്പെടുക. ഞങ്ങളുടെ ടീം നിങ്ങളെ സഹായിക്കുകയും വിവരങ്ങൾ അറിയിക്കുകയും ചെയ്യും.',
+        },
+        {
+          q: 'BUNCH & CO. യുമായി എങ്ങനെ ബന്ധപ്പെടാം?',
+          a: '+91 89212 67174 എന്ന നമ്പറിലൂടെ WhatsApp വഴിയോ ഞങ്ങളുടെ Contact പേജ് വഴിയോ നിങ്ങൾക്ക് ഞങ്ങളുമായി നേരിട്ട് ബന്ധപ്പെടാം.',
+        },
       ],
     },
     // WhatsApp Section on Homepage / Footer
@@ -488,6 +617,7 @@ export const translations = {
       quickLinks: 'ദ്രുത ലിങ്കുകൾ',
       categories: 'വിഭാഗങ്ങൾ',
       contact: 'ബന്ധപ്പെടുക',
+      returnsRefunds: 'റിട്ടേണും റീഫണ്ടും',
       rights: 'എല്ലാ അവകാശങ്ങളും നിക്ഷിപ്തം.',
       madeIn: 'കേരളത്തിൽ ❤️ ഉണ്ടാക്കിയത്',
     },
@@ -515,6 +645,50 @@ export const translations = {
       contact: 'संपर्क',
       faq: 'अक्सर पूछे जाने वाले सवाल',
       allProducts: 'सभी उत्पाद',
+      returnsPolicy: 'रिटर्न और रिफंड',
+    },
+    // Trust & Customer Assurance (COD, Returns, Refunds)
+    trust: {
+      codTitle: 'कैश ऑन डिलीवरी',
+      codDesc: 'ऑर्डर पहुँचने पर भुगतान करें।',
+      codBadge: 'कैश ऑन डिलीवरी उपलब्ध है',
+      codOrderNote: 'ऑर्डर आपके पते पर पहुँचने पर नकद भुगतान करें। ऑनलाइन भुगतान अनिवार्य नहीं है।',
+      returnsTitle: 'आसान रिटर्न',
+      returnsDesc: 'रिटर्न सहायता उपलब्ध है।',
+      returnsBadge: 'रिटर्न उपलब्ध है',
+      refundsTitle: 'रिफंड सपोर्ट',
+      refundsDesc: 'रिफंड सहायता के लिए संपर्क करें।',
+      refundsBadge: 'रिफंड सहायता उपलब्ध',
+      bannerBadge: 'आसान रिटर्न और रिफंड उपलब्ध',
+      whatsappAssistance: 'सहायता के लिए WhatsApp पर संपर्क करें।',
+    },
+    // Returns & Refunds Dedicated Policy Content
+    returnsPolicy: {
+      pageTitle: 'रिटर्न और रिफंड नीति',
+      pageSubtitle: 'उत्पाद रिटर्न और रिफंड अनुरोधों के लिए पारदर्शी सहायता।',
+      heroBadge: 'ग्राहक सुरक्षा',
+      neutralStatement:
+        'रिटर्न और रिफंड उपलब्ध हैं। अपने रिटर्न या रिफंड अनुरोध में सहायता और लागू शर्तों की पुष्टि के लिए कृपया WhatsApp के माध्यम से BUNCH & CO. से संपर्क करें।',
+      whatsappCta: 'WhatsApp सहायता से संपर्क करें',
+      whatsappMessage: 'Hi BUNCH & CO.! मुझे रिटर्न या रिफंड के संबंध में सहायता चाहिए।',
+      howToReturnTitle: '1. रिटर्न का अनुरोध कैसे करें',
+      howToReturnDesc:
+        'यदि आप प्राप्त उत्पाद वापस करना चाहते हैं, तो सीधे WhatsApp पर हमारी टीम से संपर्क करें। अपने ऑर्डर का विवरण और उत्पाद की तस्वीरें साझा करें। हमारी सहायता टीम पूरी प्रक्रिया में आपका मार्गदर्शन करेगी।',
+      contactTitle: '2. BUNCH & CO. से कैसे संपर्क करें',
+      contactDesc:
+        'आप सीधे +91 89212 67174 पर WhatsApp से संपर्क कर सकते हैं (सोमवार से शनिवार, सुबह 9 से शाम 7 बजे)। हम आपकी चैट में व्यक्तिगत सहायता प्रदान करते हैं।',
+      refundHandlingTitle: '3. रिफंड अनुरोध कैसे संसाधित होते हैं',
+      refundHandlingDesc:
+        'जब आप रिफंड के लिए संपर्क करते हैं, तो हमारी टीम विवरणों की समीक्षा करती है, लागू शर्तों की पुष्टि करती है और WhatsApp पर अगले कदम समन्वयित करती है।',
+      updatesTitle: '4. आपको अपडेट कैसे प्राप्त होंगे',
+      updatesDesc:
+        'आपके रिटर्न या रिफंड अनुरोध के सभी अपडेट सीधे WhatsApp पर दिए जाते हैं, इसलिए आपको किसी बाहरी पोर्टल पर जाने की आवश्यकता नहीं है।',
+      codTitle: '5. कैश ऑन डिलीवरी (COD) ऑर्डर',
+      codDesc:
+        'कैश ऑन डिलीवरी के माध्यम से दिए गए ऑर्डर के लिए, अनुरोध की पुष्टि होने पर हमारी सहायता टीम रिफंड व्यवस्था का समन्वय सीधे आपके साथ करेगी।',
+      configNotice: 'आधिकारिक शर्तें',
+      configNoticeDesc:
+        'विशिष्ट रिटर्न अवधि, निरीक्षण मानदंड और प्रक्रिया विवरण हमारी सहायता टीम से सीधे जाने जा सकते हैं।',
     },
     // Categories (Localized display names)
     categories: {
@@ -714,6 +888,26 @@ export const translations = {
           q: 'MOJILA 5-माइक्रोन वॉटर टैंक फ़िल्टर बैग क्या है?',
           a: 'यह पॉलीप्रोपाइलीन (PP) सामग्री से बना सेडिमेंट फ़िल्टर बैग है जो पानी के इनलेट पाइप पर लगकर रेत, मिट्टी और गाद को पानी की टंकी में जाने से रोकता है। कृपया ध्यान दें कि यह पीने के पानी को शुद्ध करने के लिए नहीं है।',
         },
+        {
+          q: 'क्या कैश ऑन डिलीवरी (COD) उपलब्ध है?',
+          a: 'हाँ! कैश ऑन डिलीवरी उपलब्ध है। ऑर्डर आपके पते पर पहुँचने पर आप नकद भुगतान कर सकते हैं। ऑनलाइन भुगतान अनिवार्य नहीं है।',
+        },
+        {
+          q: 'क्या मैं उत्पाद वापस (Return) कर सकता हूँ?',
+          a: 'हाँ, रिटर्न उपलब्ध है। अपने रिटर्न अनुरोध में सहायता और लागू शर्तों की पुष्टि के लिए कृपया WhatsApp के माध्यम से BUNCH & CO. से संपर्क करें।',
+        },
+        {
+          q: 'क्या रिफंड (Refund) उपलब्ध है?',
+          a: 'हाँ, रिफंड सहायता उपलब्ध है। अपने रिफंड अनुरोध में सहायता और लागू शर्तों की पुष्टि के लिए कृपया WhatsApp पर हमारी टीम से संपर्क करें।',
+        },
+        {
+          q: 'मैं रिटर्न या रिफंड का अनुरोध कैसे करूँ?',
+          a: 'अपने ऑर्डर और उत्पाद विवरण के साथ +91 89212 67174 पर WhatsApp संदेश भेजें। हमारी टीम प्रक्रिया में आपकी पूरी सहायता करेगी और अपडेट देगी।',
+        },
+        {
+          q: 'मैं BUNCH & CO. से कैसे संपर्क करूँ?',
+          a: 'आप सीधे +91 89212 67174 पर WhatsApp के माध्यम से या हमारे Contact पेज से संपर्क कर सकते हैं। हम सहायता के लिए सदैव तत्पर हैं।',
+        },
       ],
     },
     // WhatsApp Section on Homepage / Footer
@@ -735,6 +929,7 @@ export const translations = {
       quickLinks: 'त्वरित लिंक',
       categories: 'श्रेणियाँ',
       contact: 'संपर्क',
+      returnsRefunds: 'रिटर्न और रिफंड',
       rights: 'सर्वाधिकार सुरक्षित।',
       madeIn: 'केरल में ❤️ के साथ बनाया गया',
     },
