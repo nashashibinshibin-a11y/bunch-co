@@ -115,8 +115,25 @@ export default function ProductDetailClient({ slug }: Props) {
               )}
             </div>
 
-            {/* Package Contents Callout — Clearly states the number of filter bags in the order */}
-            {product.packSize && product.packSize > 1 ? (
+            {/* Package Contents Callout — Clearly states the pack quantity and items in the order */}
+            {product.packageContentsI18n?.[language] ? (
+              <div className="bg-amber-50/80 border border-amber-200/90 rounded-2xl p-4 mb-5 flex items-start gap-3 text-amber-950">
+                <span className="text-xl flex-shrink-0">📦</span>
+                <div>
+                  <p className="font-bold text-xs uppercase tracking-wider text-amber-800 mb-0.5">
+                    {language === 'ml' ? 'പായ്ക്ക് ഉള്ളടക്കം' : language === 'hi' ? 'पैकेज सामग्री' : 'Package Contents'}
+                  </p>
+                  <p className="text-xs sm:text-sm font-semibold text-amber-950">
+                    {product.packageContentsI18n[language].main}
+                  </p>
+                  {product.packageContentsI18n[language].sub && (
+                    <p className="text-[11px] text-amber-800/80 mt-1">
+                      {product.packageContentsI18n[language].sub}
+                    </p>
+                  )}
+                </div>
+              </div>
+            ) : product.packSize && product.packSize > 1 ? (
               <div className="bg-amber-50/80 border border-amber-200/90 rounded-2xl p-4 mb-5 flex items-start gap-3 text-amber-950">
                 <span className="text-xl flex-shrink-0">📦</span>
                 <div>
@@ -125,17 +142,17 @@ export default function ProductDetailClient({ slug }: Props) {
                   </p>
                   <p className="text-xs sm:text-sm font-semibold text-amber-950">
                     {language === 'ml'
-                      ? `ഈ ഓർഡറിൽ ${product.packSize} വാട്ടർ ടാങ്ക് ഫിൽട്ടർ ബാഗുകൾ ഉൾപ്പെടുന്നു (${product.packSize} എണ്ണത്തിന്റെ പായ്ക്ക്).`
+                      ? `ഈ ഓർഡറിൽ ${product.packSize} എണ്ണത്തിന്റെ പായ്ക്ക് ഉൾപ്പെടുന്നു.`
                       : language === 'hi'
-                      ? `इस ऑर्डर में ${product.packSize} वॉटर टैंक फ़िल्टर बैग शामिल हैं (${product.packSize} का पैक)।`
-                      : `This order contains ${product.packSize} individual water tank filter bags (Pack of ${product.packSize}).`}
+                      ? `इस ऑर्डर में ${product.packSize} का पैक शामिल है।`
+                      : `This order contains a Pack of ${product.packSize}.`}
                   </p>
                   <p className="text-[11px] text-amber-800/80 mt-1">
                     {language === 'ml'
-                      ? `1 പായ്ക്ക് ഓർഡർ ചെയ്യുമ്പോൾ ${product.packSize} ഫിൽട്ടർ ബാഗുകൾ ലഭിക്കും.`
+                      ? `1 പായ്ക്ക് ഓർഡർ ചെയ്യുമ്പോൾ ${product.packSize} എണ്ണം ലഭിക്കും.`
                       : language === 'hi'
-                      ? `1 पैक ऑर्डर करने पर ${product.packSize} फ़िल्टर बैग प्राप्त होंगे।`
-                      : `Ordering 1 pack delivers ${product.packSize} filter bags to your address.`}
+                      ? `1 पैक ऑर्डर करने पर ${product.packSize} इकाइयाँ प्राप्त होंगी।`
+                      : `Ordering 1 pack delivers ${product.packSize} units to your address.`}
                   </p>
                 </div>
               </div>
@@ -144,10 +161,10 @@ export default function ProductDetailClient({ slug }: Props) {
                 <span className="text-lg flex-shrink-0">📦</span>
                 <p className="text-xs sm:text-sm font-semibold">
                   {language === 'ml'
-                    ? 'ഈ ഓർഡറിൽ 1 വാട്ടർ ടാങ്ക് ഫിൽട്ടർ ബാഗ് അടങ്ങിയിരിക്കുന്നു.'
+                    ? 'ഈ ഓർഡറിൽ 1 യൂണിറ്റ് അടങ്ങിയിരിക്കുന്നു.'
                     : language === 'hi'
-                    ? 'इस ऑर्डर में 1 वॉटर टैंक फ़िल्टर बैग शामिल है।'
-                    : 'This order contains 1 water tank filter bag.'}
+                    ? 'इस ऑर्डर में 1 इकाई शामिल है।'
+                    : 'This order contains 1 unit.'}
                 </p>
               </div>
             )}

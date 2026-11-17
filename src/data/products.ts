@@ -34,6 +34,8 @@ export interface Product {
   originalPrice?: number;
   packSize?: number;
   packBadgeI18n?: Record<Language, string>;
+  unitNameI18n?: Record<Language, { singular: string; plural: string }>;
+  packageContentsI18n?: Record<Language, { main: string; sub: string }>;
   shortDescription: string;
   description: string;
   features: string[];
@@ -72,6 +74,25 @@ export const products: Product[] = [
       en: 'Single Pack',
       ml: 'സിംഗിൾ പായ്ക്ക്',
       hi: 'सिंगल पैक',
+    },
+    unitNameI18n: {
+      en: { singular: 'filter bag', plural: 'filter bags' },
+      ml: { singular: 'ഫിൽട്ടർ ബാഗ്', plural: 'ഫിൽട്ടർ ബാഗുകൾ' },
+      hi: { singular: 'फ़िल्टर बैग', plural: 'फ़िल्टर बैग' },
+    },
+    packageContentsI18n: {
+      en: {
+        main: 'This order contains 1 water tank filter bag.',
+        sub: 'Ready for installation on home water storage tanks.',
+      },
+      ml: {
+        main: 'ഈ ഓർഡറിൽ 1 വാട്ടർ ടാങ്ക് ഫിൽട്ടർ ബാഗ് അടങ്ങിയിരിക്കുന്നു.',
+        sub: 'വാട്ടർ ടാങ്കുകളിൽ എളുപ്പത്തിൽ ഘടിപ്പിക്കാം.',
+      },
+      hi: {
+        main: 'इस ऑर्डर में 1 वॉटर टैंक फ़िल्टर बैग शामिल है।',
+        sub: 'पानी की टंकियों में लगाने के लिए तैयार।',
+      },
     },
     shortDescription:
       'Keep unwanted dirt and suspended particles from entering your water storage system with the MOJILA 5-Micron Water Tank Filter Bag.',
@@ -199,6 +220,25 @@ export const products: Product[] = [
       ml: '2 എണ്ണത്തിന്റെ പായ്ക്ക്',
       hi: '2 का पैक',
     },
+    unitNameI18n: {
+      en: { singular: 'filter bag', plural: 'filter bags' },
+      ml: { singular: 'ഫിൽട്ടർ ബാഗ്', plural: 'ഫിൽട്ടർ ബാഗുകൾ' },
+      hi: { singular: 'फ़िल्टर बैग', plural: 'फ़िल्टर बैग' },
+    },
+    packageContentsI18n: {
+      en: {
+        main: 'This order contains 2 individual water tank filter bags (Pack of 2).',
+        sub: 'Ordering 1 pack delivers 2 filter bags to your address.',
+      },
+      ml: {
+        main: 'ഈ ഓർഡറിൽ 2 വാട്ടർ ടാങ്ക് ഫിൽട്ടർ ബാഗുകൾ ഉൾപ്പെടുന്നു (2 എണ്ണത്തിന്റെ പായ്ക്ക്).',
+        sub: '1 പായ്ക്ക് ഓർഡർ ചെയ്യുമ്പോൾ 2 ഫിൽട്ടർ ബാഗുകൾ ലഭിക്കും.',
+      },
+      hi: {
+        main: 'इस ऑर्डर में 2 वॉटर टैंक फ़िल्टर बैग शामिल हैं (2 का पैक)।',
+        sub: '1 पैक ऑर्डर करने पर 2 फ़िल्टर बैग प्राप्त होंगे।',
+      },
+    },
     shortDescription:
       'Save with the MOJILA 5-Micron Water Tank Filter Bag 2-Pack. Polypropylene filter bags with ring-collar design for dual tanks or keeping a spare backup.',
     description:
@@ -325,6 +365,25 @@ export const products: Product[] = [
       ml: '3 എണ്ണത്തിന്റെ പായ്ക്ക്',
       hi: '3 का पैक',
     },
+    unitNameI18n: {
+      en: { singular: 'filter bag', plural: 'filter bags' },
+      ml: { singular: 'ഫിൽട്ടർ ബാഗ്', plural: 'ഫിൽട്ടർ ബാഗുകൾ' },
+      hi: { singular: 'फ़िल्टर बैग', plural: 'फ़िल्टर बैग' },
+    },
+    packageContentsI18n: {
+      en: {
+        main: 'This order contains 3 individual water tank filter bags (Pack of 3).',
+        sub: 'Ordering 1 pack delivers 3 filter bags to your address.',
+      },
+      ml: {
+        main: 'ഈ ഓർഡറിൽ 3 വാട്ടർ ടാങ്ക് ഫിൽട്ടർ ബാഗുകൾ ഉൾപ്പെടുന്നു (3 എണ്ണത്തിന്റെ പായ്ക്ക്).',
+        sub: '1 പായ്ക്ക് ഓർഡർ ചെയ്യുമ്പോൾ 3 ഫിൽട്ടർ ബാഗുകൾ ലഭിക്കും.',
+      },
+      hi: {
+        main: 'इस ऑर्डर में 3 वॉटर टैंक फ़िल्टर बैग शामिल हैं (3 का पैक)।',
+        sub: '1 पैक ऑर्डर करने पर 3 फ़िल्टर बैग प्राप्त होंगे।',
+      },
+    },
     shortDescription:
       'Save with the MOJILA 5-Micron Water Tank Filter Bag 3-Pack. Polypropylene filter bags with ring-collar design for multiple tanks or regular replacements.',
     description:
@@ -435,6 +494,155 @@ export const products: Product[] = [
       hi: 'डिलीवरी उपलब्धता और अनुमानित समय सीमा WhatsApp के माध्यम से तय की जाती है। अपने स्थान पर डिलीवरी की जाँच के लिए संपर्क करें।',
     },
   },
+
+  // 4. BUNCH & CO. Car Seat Hanger (Pack of 2) — Second Product Line (₹299)
+  {
+    id: 'bunch-co-car-seat-hanger-pack-2',
+    slug: 'car-seat-hanger-pack-of-2',
+    name: 'Car Seat Hanger (Pack of 2)',
+    brand: 'BUNCH & CO.',
+    category: 'Car Accessories',
+    price: 299,
+    originalPrice: 399,
+    packSize: 2,
+    packBadgeI18n: {
+      en: 'Pack of 2',
+      ml: '2 എണ്ണത്തിന്റെ പായ്ക്ക്',
+      hi: '2 का पैक',
+    },
+    unitNameI18n: {
+      en: { singular: 'hanger', plural: 'hangers (4 hooks total)' },
+      ml: { singular: 'ഹാംഗർ', plural: 'ഹാംഗറുകൾ (ആകെ 4 ഹുക്കുകൾ)' },
+      hi: { singular: 'हैंगर', plural: 'हैंगर (कुल 4 हुक)' },
+    },
+    packageContentsI18n: {
+      en: {
+        main: 'This order contains 2 car seat hangers providing 4 hanging hooks in total (Pack of 2).',
+        sub: 'Ordering 1 pack delivers 2 dual-hook hangers to your address.',
+      },
+      ml: {
+        main: 'ഈ ഓർഡറിൽ 2 കാർ സീറ്റ് ഹാംഗറുകൾ ഉൾപ്പെടുന്നു (ആകെ 4 ഹുക്കുകൾ - 2 എണ്ണത്തിന്റെ പായ്ക്ക്).',
+        sub: '1 പായ്ക്ക് ഓർഡർ ചെയ്യുമ്പോൾ 2 ഹാംഗറുകൾ (ആകെ 4 ഹുക്കുകൾ) ലഭിക്കും.',
+      },
+      hi: {
+        main: 'इस ऑर्डर में 2 कार सीट हैंगर शामिल हैं (कुल 4 हैंगिंग हुक - 2 का पैक)।',
+        sub: '1 पैक ऑर्डर करने पर 2 हैंगर (कुल 4 हुक) प्राप्त होंगे।',
+      },
+    },
+    shortDescription:
+      'Make your car more organised with the BUNCH & CO. Car Seat Hanger. Designed to attach around the front-seat headrest posts, these handy hooks help you hang shopping bags, handbags and other lightweight items neatly behind or beside your car seat.',
+    description:
+      'Make your car more organised with the BUNCH & CO. Car Seat Hanger. Designed to attach around the front-seat headrest posts, these handy hooks help you hang shopping bags, handbags and other lightweight items neatly behind or beside your car seat. Each pack includes 2 hangers providing 4 hanging hooks in total.',
+    features: [
+      'Pack of 2',
+      'Four hanging hooks in total, as shown in the product demonstration images',
+      'Designed for car headrest installation',
+      'Helps organise shopping bags and handbags',
+      'Compact and convenient design',
+      'Suitable for compatible car headrests',
+    ],
+    specifications: [
+      { label: 'Package Contents', value: '2 Car Seat Hangers (4 Hooks Total)' },
+      { label: 'Pack Size', value: 'Pack of 2' },
+      { label: 'Total Hooks', value: '4 Hooks Total (2 per hanger)' },
+      { label: 'Dimensions', value: '17 cm × 10.4 cm' },
+      { label: 'Strap Width', value: '4.5 cm each' },
+      { label: 'Mounting Style', value: 'Headrest Post Slot Mount' },
+      { label: 'Placement', value: 'Behind front seats or facing inward' },
+      { label: 'Compatibility', value: 'Suitable for compatible car headrests' },
+    ],
+    images: [
+      '/images/products/car-seat-hanger/product-main.png',
+      '/images/products/car-seat-hanger/product-size.png',
+      '/images/products/car-seat-hanger/product-usage.png',
+    ],
+    availability: 'in-stock',
+    delivery: {
+      note: 'Delivery availability and estimated timelines are confirmed through WhatsApp. Contact us to check delivery to your location.',
+    },
+    featured: true,
+    newArrival: true,
+    whatsappMessage:
+      'Hi BUNCH & CO.! I would like to order the Car Seat Hanger (Pack of 2) for ₹299.',
+    nameI18n: {
+      en: 'Car Seat Hanger (Pack of 2)',
+      ml: 'കാർ സീറ്റ് ഹാംഗർ (2 എണ്ണത്തിന്റെ പായ്ക്ക്)',
+      hi: 'कार सीट हैंगर (2 का पैक)',
+    },
+    shortDescriptionI18n: {
+      en: 'Make your car more organised with the BUNCH & CO. Car Seat Hanger. Designed to attach around front-seat headrest posts to hang shopping bags, handbags and lightweight items neatly.',
+      ml: 'BUNCH & CO. കാർ സീറ്റ് ഹാംഗർ ഉപയോഗിച്ച് നിങ്ങളുടെ കാർ കൂടുതൽ അടുക്കും ചിട്ടയുമുള്ളതാക്കൂ. ഹെഡ്‌റെസ്റ്റ് പോസ്റ്റുകളിൽ എളുപ്പത്തിൽ ഘടിപ്പിച്ച് ബാഗുകളും സാധനങ്ങളും തൂക്കിയിടാം.',
+      hi: 'BUNCH & CO. कार सीट हैंगर के साथ अपनी कार को अधिक व्यवस्थित बनाएं। हेडरेस्ट पोस्ट पर लगाकर शॉपिंग बैग और हैंडबैग आसानी से टांगें।',
+    },
+    descriptionI18n: {
+      en: 'Make your car more organised with the BUNCH & CO. Car Seat Hanger. Designed to attach around the front-seat headrest posts, these handy hooks help you hang shopping bags, handbags and other lightweight items neatly behind or beside your car seat. Each pack includes 2 hangers providing 4 hanging hooks in total.',
+      ml: 'BUNCH & CO. കാർ സീറ്റ് ഹാംഗർ ഉപയോഗിച്ച് നിങ്ങളുടെ കാർ കൂടുതൽ അടുക്കും ചിട്ടയുമുള്ളതാക്കൂ. മുൻ സീറ്റുകളിലെ ഹെഡ്‌റെസ്റ്റ് പോസ്റ്റുകളിൽ എളുപ്പത്തിൽ ഘടിപ്പിക്കാവുന്ന രീതിയിലാണ് ഇത് രൂപകൽപ്പന ചെയ്തിരിക്കുന്നത്. ഷോപ്പിംഗ് ബാഗുകൾ, ഹാൻഡ്‌ബാഗുകൾ, മറ്റ് ഭാരം കുറഞ്ഞ വസ്തുക്കൾ എന്നിവ സീറ്റിന് പിന്നിലോ വശങ്ങളിലോ വൃത്തിയായി തൂക്കിയിടാൻ ഈ ഹുക്കുകൾ സഹായിക്കുന്നു. ഓരോ പായ്ക്കിലും 2 ഹാംഗറുകൾ അടങ്ങിയിരിക്കുന്നു (ആകെ 4 ഹുക്കുകൾ).',
+      hi: 'BUNCH & CO. कार सीट हैंगर के साथ अपनी कार को अधिक व्यवस्थित बनाएं। फ्रंट सीट के हेडरेस्ट पोस्ट पर लगाने के लिए डिज़ाइन किया गया, यह आसान हुक आपको शॉपिंग बैग, हैंडबैग और अन्य हल्के सामान को अपनी कार सीट के पीछे या बगल में करीने से टांगने में मदद करता है। प्रत्येक पैक में 2 हैंगर शामिल हैं (कुल 4 हुक)।',
+    },
+    featuresI18n: {
+      en: [
+        'Pack of 2',
+        'Four hanging hooks in total, as shown in the product demonstration images',
+        'Designed for car headrest installation',
+        'Helps organise shopping bags and handbags',
+        'Compact and convenient design',
+        'Suitable for compatible car headrests',
+      ],
+      ml: [
+        'ഓരോ ഓർഡറിലും 2 ഹാംഗറുകളുടെ പായ്ക്ക് ഉൾപ്പെടുന്നു',
+        'ആകെ നാല് ഹാംഗിംഗ് ഹുക്കുകൾ (ഒരു ഹാംഗറിൽ 2 ഹുക്കുകൾ വീതം)',
+        'കാർ ഹെഡ്‌റെസ്റ്റ് പോസ്റ്റിൽ എളുപ്പത്തിൽ ഘടിപ്പിക്കാവുന്ന ഡിസൈൻ',
+        'ഷോപ്പിംഗ് ബാഗുകളും ഹാൻഡ്‌ബാഗുകളും സൂക്ഷിക്കാൻ സഹായിക്കുന്നു',
+        'ഒതുക്കമുള്ളതും സൗകര്യപ്രദവുമായ ഡിസൈൻ',
+        'യോജിക്കുന്ന കാർ ഹെഡ്‌റെസ്റ്റുകൾക്ക് അനുയോജ്യം',
+      ],
+      hi: [
+        'प्रत्येक ऑर्डर में 2 हैंगर का पैक शामिल है',
+        'कुल चार हैंगिंग हुक (प्रत्येक हैंगर में 2 हुक)',
+        'कार हेडरेस्ट पोस्ट इंस्टॉलेशन के लिए डिज़ाइन किया गया',
+        'शॉपिंग बैग और हैंडबैग को व्यवस्थित रखने में मददगार',
+        'कॉम्पैक्ट और सुविधाजनक डिज़ाइन',
+        'अनुकूल कार हेडरेस्ट के लिए उपयुक्त',
+      ],
+    },
+    specificationsI18n: {
+      en: [
+        { label: 'Package Contents', value: '2 Car Seat Hangers (4 Hooks Total)' },
+        { label: 'Pack Size', value: 'Pack of 2' },
+        { label: 'Total Hooks', value: '4 Hooks Total (2 per hanger)' },
+        { label: 'Dimensions', value: '17 cm × 10.4 cm' },
+        { label: 'Strap Width', value: '4.5 cm each' },
+        { label: 'Mounting Style', value: 'Headrest Post Slot Mount' },
+        { label: 'Placement', value: 'Behind front seats or facing inward' },
+        { label: 'Compatibility', value: 'Suitable for compatible car headrests' },
+      ],
+      ml: [
+        { label: 'പായ്ക്ക് ഉള്ളടക്കം', value: '2 കാർ സീറ്റ് ഹാംഗറുകൾ (ആകെ 4 ഹുക്കുകൾ)' },
+        { label: 'പായ്ക്ക് വലിപ്പം', value: '2 എണ്ണത്തിന്റെ പായ്ക്ക്' },
+        { label: 'ആകെ ഹുക്കുകൾ', value: '4 ഹുക്കുകൾ (ഒന്നിൽ 2 വീതം)' },
+        { label: 'വലിപ്പം', value: '17 cm × 10.4 cm' },
+        { label: 'സ്ട്രോപ്പ് വീതി', value: '4.5 cm' },
+        { label: 'ഘടിപ്പിക്കുന്ന രീതി', value: 'ഹെഡ്‌റെസ്റ്റ് സ്ലോട്ട്' },
+        { label: 'ഉപയോഗ സ്ഥാനം', value: 'മുൻ സീറ്റുകൾക്ക് പിന്നിലോ വശങ്ങളിലോ' },
+        { label: 'അനുയോജ്യത', value: 'യോജിക്കുന്ന കാർ ഹെഡ്‌റെസ്റ്റുകൾക്ക്' },
+      ],
+      hi: [
+        { label: 'पैकेज सामग्री', value: '2 कार सीट हैंगर (कुल 4 हुक)' },
+        { label: 'पैक आकार', value: '2 का पैक' },
+        { label: 'कुल हैंगिंग हुक', value: '4 हुक (प्रति हैंगर 2)' },
+        { label: 'आकार', value: '17 cm × 10.4 cm' },
+        { label: 'स्ट्रैप चौड़ाई', value: '4.5 cm' },
+        { label: 'माउंटिंग प्रकार', value: 'हेडरेस्ट स्लॉट' },
+        { label: 'उपयोग स्थिति', value: 'आगे की सीट के पीछे या बगल में' },
+        { label: 'संगतता', value: 'अनुकूल कार हेडरेस्ट के लिए उपयुक्त' },
+      ],
+    },
+    deliveryNoteI18n: {
+      en: 'Delivery availability and estimated timelines are confirmed through WhatsApp. Contact us to check delivery to your location.',
+      ml: 'ഡെലിവറി ലഭ്യതയും സമയവും WhatsApp വഴി സ്ഥിരീകരിക്കുന്നു. നിങ്ങളുടെ സ്ഥലത്തെ ഡെലിവറി അറിയാൻ ഞങ്ങളുമായി ബന്ധപ്പെടുക.',
+      hi: 'डिलीवरी उपलब्धता और अनुमानित समय सीमा WhatsApp के माध्यम से तय की जाती है। अपने स्थान पर डिलीवरी की जाँच के लिए संपर्क करें।',
+    },
+  },
 ];
 
 // ============================================================
@@ -532,14 +740,14 @@ export const categories: CategoryMeta[] = [
     description: 'Everyday solutions for home and kitchen maintenance',
   },
   {
-    name: 'Kitchen Essentials',
-    icon: '🍳',
-    description: 'Quality tools for effortless cooking and dining',
-  },
-  {
     name: 'Car Accessories',
     icon: '🚗',
     description: 'Practical accessories for car care and comfort',
+  },
+  {
+    name: 'Kitchen Essentials',
+    icon: '🍳',
+    description: 'Quality tools for effortless cooking and dining',
   },
   {
     name: 'Daily Use Products',
@@ -617,7 +825,7 @@ export interface OrderFormData {
 
 /**
  * Generates the official BUNCH & CO. WhatsApp order message in the selected language.
- * Clearly communicates pack quantity and individual filter bag counts without ambiguity.
+ * Clearly communicates pack quantity and individual item counts without ambiguity.
  */
 export function buildWhatsAppOrderMessage(
   product: Product,
@@ -628,24 +836,30 @@ export function buildWhatsAppOrderMessage(
   const totalAmount = product.price * formData.quantity;
   const localizedProductName = product.nameI18n?.[lang] || product.name;
 
-  // Language-specific Pack / Unit formatting to ensure zero confusion between pack count and individual bags
+  // Language-specific Pack / Unit formatting to ensure zero confusion between pack count and individual items
   let quantityText = `${formData.quantity}`;
   if (product.packSize && product.packSize > 1) {
-    const totalBags = formData.quantity * product.packSize;
+    const totalItems = formData.quantity * product.packSize;
+    const unitPlural =
+      product.unitNameI18n?.[lang]?.plural ||
+      (lang === 'ml' ? 'എണ്ണം' : lang === 'hi' ? 'इकाइयाँ' : 'units');
     if (lang === 'ml') {
-      quantityText = `${formData.quantity} പായ്ക്ക് (ആകെ ${totalBags} ഫിൽട്ടർ ബാഗുകൾ)`;
+      quantityText = `${formData.quantity} പായ്ക്ക് (ആകെ ${totalItems} ${unitPlural})`;
     } else if (lang === 'hi') {
-      quantityText = `${formData.quantity} पैक (कुल ${totalBags} फ़िल्टर बैग)`;
+      quantityText = `${formData.quantity} पैक (कुल ${totalItems} ${unitPlural})`;
     } else {
-      quantityText = `${formData.quantity} ${formData.quantity === 1 ? 'Pack' : 'Packs'} (${totalBags} filter bags total)`;
+      quantityText = `${formData.quantity} ${formData.quantity === 1 ? 'Pack' : 'Packs'} (${totalItems} ${unitPlural} total)`;
     }
   } else {
+    const unitSingular =
+      product.unitNameI18n?.[lang]?.singular ||
+      (lang === 'ml' ? 'എണ്ണം' : lang === 'hi' ? 'इकाई' : 'unit');
     if (lang === 'ml') {
-      quantityText = `${formData.quantity} എണ്ണം (1 ഫിൽട്ടർ ബാഗ്)`;
+      quantityText = `${formData.quantity} എണ്ണം (1 ${unitSingular})`;
     } else if (lang === 'hi') {
-      quantityText = `${formData.quantity} इकाई (1 फ़िल्टर बैग)`;
+      quantityText = `${formData.quantity} इकाई (1 ${unitSingular})`;
     } else {
-      quantityText = `${formData.quantity} ${formData.quantity === 1 ? 'Unit' : 'Units'} (1 filter bag)`;
+      quantityText = `${formData.quantity} ${formData.quantity === 1 ? 'Unit' : 'Units'} (1 ${unitSingular})`;
     }
   }
 

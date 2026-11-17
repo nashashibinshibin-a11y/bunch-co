@@ -717,10 +717,13 @@ export default function OrderClient({ slug }: Props) {
                 <p className="text-center text-[11px] text-gray-400 mt-2">
                   {t.orderForm.totalAmount}: ₹{totalAmount} ({quantity}{' '}
                   {product.packSize && product.packSize > 1
-                    ? `${quantity === 1 ? 'pack' : 'packs'} • ${quantity * product.packSize} filter bags`
+                    ? `${quantity === 1 ? (language === 'ml' ? 'പായ്ക്ക്' : language === 'hi' ? 'पैक' : 'pack') : (language === 'ml' ? 'പായ്ക്കുകൾ' : language === 'hi' ? 'पैक' : 'packs')} • ${quantity * product.packSize} ${
+                        product.unitNameI18n?.[language]?.plural ||
+                        (language === 'ml' ? 'എണ്ണം' : language === 'hi' ? 'इकाइयाँ' : 'items')
+                      }`
                     : quantity === 1
-                    ? 'unit'
-                    : 'units'}
+                    ? (product.unitNameI18n?.[language]?.singular || (language === 'ml' ? 'യൂണിറ്റ്' : language === 'hi' ? 'इकाई' : 'unit'))
+                    : (product.unitNameI18n?.[language]?.plural || (language === 'ml' ? 'യൂണിറ്റുകൾ' : language === 'hi' ? 'इकाइयाँ' : 'units'))}
                   )
                 </p>
               </div>
@@ -770,15 +773,15 @@ export default function OrderClient({ slug }: Props) {
                     ₹{product.price}{' '}
                     {product.packSize && product.packSize > 1
                       ? language === 'ml'
-                        ? `/ പായ്ക്ക് (${product.packSize} ഫിൽട്ടർ ബാഗുകൾ)`
+                        ? `/ പായ്ക്ക് (${product.packSize} ${product.unitNameI18n?.ml?.plural || 'എണ്ണം'})`
                         : language === 'hi'
-                        ? `/ पैक (${product.packSize} फ़िल्टर बैग)`
-                        : `/ pack (${product.packSize} filter bags)`
+                        ? `/ पैक (${product.packSize} ${product.unitNameI18n?.hi?.plural || 'इकाइयाँ'})`
+                        : `/ pack (${product.packSize} ${product.unitNameI18n?.en?.plural || 'items'})`
                       : language === 'ml'
-                      ? '/ എണ്ണം'
+                      ? `/ ${product.unitNameI18n?.ml?.singular || 'എണ്ണം'}`
                       : language === 'hi'
-                      ? '/ इकाई'
-                      : '/ unit'}
+                      ? `/ ${product.unitNameI18n?.hi?.singular || 'इकाई'}`
+                      : `/ ${product.unitNameI18n?.en?.singular || 'unit'}`}
                   </p>
                   {product.packSize && product.packSize > 1 && (
                     <p className="text-[10px] text-brand-orange font-semibold mt-1">
@@ -797,11 +800,8 @@ export default function OrderClient({ slug }: Props) {
                       ={' '}
                       <strong className="text-brand-navy">
                         {quantity * product.packSize}{' '}
-                        {language === 'ml'
-                          ? 'ഫിൽട്ടർ ബാഗുകൾ'
-                          : language === 'hi'
-                          ? 'फ़िल्टर बैग'
-                          : 'filter bags'}
+                        {product.unitNameI18n?.[language]?.plural ||
+                          (language === 'ml' ? 'എണ്ണം' : language === 'hi' ? 'ഇकाइयाँ' : 'items')}
                       </strong>
                     </p>
                   )}
@@ -876,18 +876,19 @@ export default function OrderClient({ slug }: Props) {
                   <div className="flex justify-between text-xs text-brand-navy bg-blue-50/70 px-3 py-1.5 rounded-lg font-medium">
                     <span>
                       {language === 'ml'
-                        ? 'ആകെ ഫിൽട്ടർ ബാഗുകൾ:'
+                        ? 'ആകെ ഇനങ്ങൾ:'
                         : language === 'hi'
-                        ? 'कुल फ़िल्टर बैग:'
-                        : 'Total Filter Bags:'}
+                        ? 'कुल सामग्री:'
+                        : 'Total Items:'}
                     </span>
                     <span className="font-bold">
                       {quantity * product.packSize}{' '}
-                      {language === 'ml'
-                        ? 'ഫിൽട്ടർ ബാഗുകൾ'
-                        : language === 'hi'
-                        ? 'फ़िल्टर बैग'
-                        : 'filter bags'}
+                      {product.unitNameI18n?.[language]?.plural ||
+                        (language === 'ml'
+                          ? 'എണ്ണം'
+                          : language === 'hi'
+                          ? 'इकाइयाँ'
+                          : 'items')}
                     </span>
                   </div>
                 )}
